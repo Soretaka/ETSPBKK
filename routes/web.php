@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\formulir;
 Route: use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/formulir',function(){
     $Dokters = App\Models\Dokter::all();
     return view ('formulir',['Pasiens'=>$Pasiens,'Dokters'=>$Dokters]);
 })->middleware(['auth'])->name('formulir');
+
+Route::post('store-form', [form::class, 'store']);
 Route::get("/article", [PostController::class, 'index'])->middleware(['auth'])->name('article');
 
 // Route::prefix('/rekam_medis'->group(function(){

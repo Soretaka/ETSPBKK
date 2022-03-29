@@ -10,10 +10,10 @@ class Post extends Model
     use HasFactory;
     protected $guardeed = ['id'];
     public function pasien(){
-        return $this->hasMany(Pasien::class);
+        return $this->belongsTo(Pasien::class);
     }
     public function dokter(){
-        return $this->hasM(Dokter::class);
+        return $this->belongsTo(Dokter::class);
     }
 }
 

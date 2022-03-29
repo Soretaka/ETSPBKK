@@ -15,10 +15,10 @@
                       @foreach($articles as $article)
                           <article class="mb-5">
                               <h3>
-                                    id pasien: {{ $article->pasien_id }}              
+                                    id pasien: {{ $article->pasien->nama }}              
                               </h3>
                               {{-- <h6>By: {{ !empty($article->user)? $article->user->name:'' }}</h6> --}}
-                              <h6> id dokter pengurus: {{ $article->dokter_id }}</h6>
+                              <h6> id dokter pengurus: {{ $article->dokter->nama }}</h6>
                               <p>kondisi kesehatan: {{ $article->kondisiKesehatan }}</p>
                               <p>suhu: {{ $article->suhu }}</p>
                               <p>gambar : {{ $article->gambar }}</p>
